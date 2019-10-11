@@ -48,7 +48,9 @@ app.get('/productos', function (req, res) {
     if(err) throw err;
     console.log("Conectado a la DB");
 });
+
+let port = process.env.PORT || 3000
  
 app.listen(3000, () => {
-    console.log("Servidor ONLINE");
+    console.log(`Servidor ONLINE en el puerto ${ port }`);
 });
